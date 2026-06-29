@@ -1,0 +1,12 @@
+root = true
+
+# 所有文件
+[*]
+indent_style = space     # 使用空格缩进
+indent_size = 4               # 缩进4个空格
+end_of_line = lf              # 统一使用LF换行符
+trim_trailing_whitespace = true # 自动删除行尾空格
+insert_final_newline = true          # 文件末尾插入空行
+
+# C#脚本文件
+[*.cs]
