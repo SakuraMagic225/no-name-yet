@@ -10,7 +10,7 @@ public enum GameState
 
 public class GameManager : Singleton<GameManager>
 {
-    public GameState CurrentState { get; private set; }
+    public GameState CurrentState { get; private set; } = GameState.Menu;
 
     void Start()
     {
@@ -30,9 +30,6 @@ public class GameManager : Singleton<GameManager>
 
     public void ChangeState(GameState newState)
     {
-        if (CurrentState == newState) return;
-        CurrentState = newState;
-
         // 处理状态进入时的逻辑
         switch (newState)
         {
@@ -49,6 +46,9 @@ public class GameManager : Singleton<GameManager>
                 Time.timeScale = 0.5f; // 结算时给一点慢镜头效果
                 break;
         }
+
+        if (CurrentState == newState) return;
+        CurrentState = newState;
 
         // 广播状态切换事件
         EventCenter.Broadcast(EventType.GameStateChanged, newState);
