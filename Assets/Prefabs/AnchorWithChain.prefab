@@ -164,7 +164,7 @@ Transform:
   m_GameObject: {fileID: 3568118618458626558}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -9, z: 0}
+  m_LocalPosition: {x: 0, y: -3.43, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -355,15 +355,13 @@ LineRenderer:
   m_SortingOrder: 0
   m_Positions:
   - {x: 0, y: 0, z: 0}
-  - {x: 0, y: -1, z: 0}
-  - {x: 0, y: -2, z: 0}
-  - {x: 0, y: -3, z: 0}
-  - {x: 0, y: -4, z: 0}
-  - {x: 0, y: -5, z: 0}
-  - {x: 0, y: -6, z: 0}
-  - {x: 0, y: -7, z: 0}
-  - {x: 0, y: -8, z: 0}
-  - {x: 0, y: -9, z: 0}
+  - {x: 0, y: -0.49, z: 0}
+  - {x: 0, y: -0.98, z: 0}
+  - {x: 0, y: -1.47, z: 0}
+  - {x: 0, y: -1.96, z: 0}
+  - {x: 0, y: -2.45, z: 0}
+  - {x: 0, y: -2.94, z: 0}
+  - {x: 0, y: -3.43, z: 0}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -437,9 +435,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentAnchor: {fileID: 8475692929226619962}
   hookInstance: {fileID: 101753640666857414}
-  segmentCount: 10
-  segmentLength: 1
-  totalLength: 10
+  segmentCount: 8
+  segmentLength: 0.49
+  totalLength: 3.92
   gravity: {x: 0, y: -0.3}
   drag: 0.95
   constraintIterations: 10

@@ -22,7 +22,8 @@ Texture2D:
   m_MipCount: 1
   m_IsReadable: 1
   m_IsPreProcessed: 0
-  m_IgnoreMasterTextureLimit: 0
+  m_IgnoreMipmapLimit: 0
+  m_MipmapLimitGroupName: 
   m_StreamingMipmaps: 0
   m_StreamingMipmapsPriority: 0
   m_VTOnly: 0
@@ -65,7 +66,22 @@ MonoBehaviour:
     the 2D Renderer in Universal RP.
   preview: {fileID: -3604256930052969394}
   dependencies:
-  - dependency: {fileID: 2800000, guid: b3ab972b21db85d48ade9657efdd4771, type: 3}
+  - dependency: {fileID: 1277150345330302575, guid: c407680de8cc96a419517915cdb4e2ee, type: 3}
+    instantiationMode: 0
+  - dependency: {fileID: 3603172504662974812, guid: 89bfaaed9cfb89c4c8bfd19864a139c5, type: 3}
+    instantiationMode: 0
+  - dependency: {fileID: 11400000, guid: a22d23a1fcc30ed4b9a04af0c130d082, type: 2}
     instantiationMode: 1
+  - dependency: {fileID: 2100000, guid: 6c9e06f5d9528374eb22d1d60a4a5281, type: 2}
+    instantiationMode: 0
+  - dependency: {fileID: 9198686939286993549, guid: 9ce7a565dc045034dad7bb1a962202da, type: 3}
+    instantiationMode: 0
+  - dependency: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+    instantiationMode: 0
+  - dependency: {fileID: 2800000, guid: f032b5e38e4bc1c4db3d75854cfa86ac, type: 3}
+    instantiationMode: 0
+  - dependency: {fileID: 2800000, guid: 34ca999cd9426364f86f29e5de7a4348, type: 3}
+    instantiationMode: 0
   templatePipeline: {fileID: 0}
+  badge: {fileID: 0}
   addToDefaults: 1
