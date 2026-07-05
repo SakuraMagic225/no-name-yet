@@ -17,6 +17,9 @@ namespace RPG2D.Character.Monster.Piranha
         [SerializeField, Min(0f)] private float moveSpeed = 2f;
         [SerializeField] private PiranhaMoveDirection initialDirection = PiranhaMoveDirection.Right;
 
+        [Header("巡逻范围")]
+        [SerializeField] private Collider2D patrolArea;
+
         [Header("捕获")]
         [SerializeField] private Transform bitePoint;
         [SerializeField, Min(0f)] private float releaseCooldown = 0.35f;
@@ -123,10 +126,54 @@ namespace RPG2D.Character.Monster.Piranha
         /// </summary>
         private void UpdateTurnAround()
         {
+            if (patrolArea != null)
+            {
+                if (ShouldTurnAroundByPatrolArea())
+                {
+                    ClampInsidePatrolArea();
+                    TurnAround();
+                }
+
+                return;
+            }
+
             if (ShouldTurnAroundByCamera())
             {
                 TurnAround();
             }
+        }
+
+        /// <summary>
+        /// 根据独立巡逻范围碰撞体判断是否需要调头，允许关卡自定义食人鱼左右游动范围。
+        /// </summary>
+        private bool ShouldTurnAroundByPatrolArea()
+        {
+            Bounds movementBounds = GetMovementBounds();
+            Bounds areaBounds = patrolArea.bounds;
+
+            return moveDirection < 0 && movementBounds.min.x <= areaBounds.min.x
+                || moveDirection > 0 && movementBounds.max.x >= areaBounds.max.x;
+        }
+
+        /// <summary>
+        /// 将越过巡逻范围的鱼身前缘推回范围内，避免调头后继续停留在边界外。
+        /// </summary>
+        private void ClampInsidePatrolArea()
+        {
+            Bounds movementBounds = GetMovementBounds();
+            Bounds areaBounds = patrolArea.bounds;
+            Vector3 position = transform.position;
+
+            if (moveDirection < 0 && movementBounds.min.x < areaBounds.min.x)
+            {
+                position.x += areaBounds.min.x - movementBounds.min.x;
+            }
+            else if (moveDirection > 0 && movementBounds.max.x > areaBounds.max.x)
+            {
+                position.x -= movementBounds.max.x - areaBounds.max.x;
+            }
+
+            transform.position = position;
         }
 
         /// <summary>
