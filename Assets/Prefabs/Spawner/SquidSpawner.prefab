@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8409507234016240637}
   - component: {fileID: -5009017069226127211}
   m_Layer: 0
-  m_Name: JellyfishSpawner_2
+  m_Name: SquidSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

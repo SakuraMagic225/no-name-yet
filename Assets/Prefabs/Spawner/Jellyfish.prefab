@@ -28,7 +28,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -30.742655, y: -65.73584, z: -0.8313135}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -101,6 +101,6 @@ MonoBehaviour:
   speedVariance: 0.5
   driftAmplitude: 0.75
   driftFrequency: 0.25
-  baseScale: 1
+  baseScale: 2
   scaleVariance: 0.5
   despawnMargin: 2

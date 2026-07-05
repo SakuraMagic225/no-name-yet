@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace RPG2D.Character.Monster.Jellyfish
 {
-    public class JellyfishV2Spawner : MonoBehaviour, IJellyfishSpawner
+    public class SquidSpawner : MonoBehaviour, IJellyfishSpawner
     {
         [Header("生成")]
         [SerializeField] private GameObject jellyfishPrefab;
@@ -76,7 +76,7 @@ namespace RPG2D.Character.Monster.Jellyfish
         {
             if (jellyfishPrefab == null)
             {
-                Debug.LogWarning($"[{name}] JellyfishV2Spawner.jellyfishPrefab 未赋值", this);
+                Debug.LogWarning($"[{name}] SquidSpawner.jellyfishPrefab 未赋值", this);
                 return;
             }
 
