@@ -410,8 +410,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentDepth: 0
-  targetDepth: 200
+  targetDepth: 500
   depthMultiplier: 2.5
+  midCheckpointDepth: 100
   hasMagnet: 0
   isMagnetActive: 0
 --- !u!1001 &1397827977595650284

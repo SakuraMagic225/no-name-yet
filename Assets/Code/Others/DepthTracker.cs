@@ -33,6 +33,7 @@ public class DepthTracker : MonoBehaviour
                 isTracking = true;
                 break;
             case GameState.MidCheckpoint:
+                isTracking = false;
                 break;
             case GameState.Menu:
                 isTracking = false;
@@ -53,7 +54,7 @@ public class DepthTracker : MonoBehaviour
         float displayDepth = rawDepth * Blackboard.Instance.depthMultiplier;
         Blackboard.Instance.currentDepth = Mathf.Max(0, displayDepth);
 
-        if (!midCheckpointTriggered && Blackboard.Instance.currentDepth >= 250f)
+        if (!midCheckpointTriggered && Blackboard.Instance.currentDepth >= Blackboard.Instance.midCheckpointDepth)
         {
             midCheckpointTriggered = true;
             GameManager.Instance.ChangeState(GameState.MidCheckpoint);
